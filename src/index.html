@@ -17,6 +17,16 @@
       integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
       crossorigin="anonymous"
     />
+    <style>
+      img[data-src] {
+        opacity: 0 !important;
+      }
+    
+      img[src] {
+        opacity: 1 !important;
+      }
+    </style>
+    <script src="/js/lazyload.js"></script>
   </head>
 
   <body class="body">
@@ -26,5 +36,23 @@
     <include src="./partials/modals/backdrop.html"></include>
     <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
     <script src="./index.js"></script>
+    
+<noscript>
+		
+	<style>
+		img[data-src] {
+			display: none !important;
+		}
+	</style>
+
+</noscript>
+
+<script>
+
+	let images = document.querySelectorAll("img");
+
+	lazyload(images);
+
+</script>
   </body>
 </html>
