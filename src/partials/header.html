@@ -8,12 +8,101 @@
         <span class="header__logo-span"> Filmoteka</span>
       </a>
       <ul class="header__nav-list">
+        <li class="nav__list js-login" id="login">
+          <svg class="icon-user" width="16" height="12">
+            <use href="./images/svg/svg.svg#icon-user"></use>
+          </svg>
+          <a href="" class="nav__link"> log in</a>
+        </li>
+        <li class="nav__list js-logout" id="logOut">
+          <svg class="icon-user" width="16" height="12">
+            <use href="./images/svg/svg.svg#icon-logout"></use>
+          </svg>
+          <a href="" class="nav__link">log out</a>
+        </li>
         <li>
           <a href="./index.html" class="header__nav-home-link home header__link_active" id="home-link">Home</a>
         </li>
         <li>
           <a href="#" class="header__nav-library-link library" id="library-link">my library</a>
         </li>
+        <div class="backdrop-sing modal-auth--hidden">
+          <div class="modal-signup ">
+            <div class="cl-btn-mod">
+              <div class="cl-btn-mod-in">
+                <div class="cl-btn-mod-txt">Close</div>
+              </div>
+            </div>
+            <div class="signup-wpapper modal-singup--hidden">
+              <h2 class="modal__title">Sing up</h2>
+              <svg width="30px" height="30px" class="modal__back">
+                <use href="./images/svg/svg.svg#icon-back"></use>
+              </svg>
+              <form action="registration" class="modal__form-registration">
+    
+                <label class="modal__label">
+                  <span class="modal__label-txt">Name</span>
+                  <input type="text" name="name" id="singup-name" required class="modal__field-input" />
+                  <svg class="modal__icon" width="18px" height="18px">
+                    <use href="./images/svg/svg.svg#icon-person"></use>
+                  </svg>
+                </label>
+                <label class="modal__label">
+                  <span class="modal__label-txt">Email</span>
+                  <input type="email" name="email" class="modal__field-input" title="***@mail.com"
+                    pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required />
+                  <svg width="18px" height="18px" class="modal__icon">
+                    <use href="./images/svg/svg.svg#icon-email"></use>
+                  </svg>
+                </label>
+                <label class="modal__label">
+                  <span class="modal__label-txt">Password</span>
+                  <input type="password" name="pass" class="modal__field-input" required minlength="5" />
+                  <svg width="18px" height="18px" class="modal__icon">
+                    <use href="./images/svg/svg.svg#icon-key"></use>
+                  </svg>
+                </label>
+                <button type="submit" class="modal__button" aria-label="sign up">Sign up</button>
+              </form>
+              <div class="signup-modal__error"></div>
+            </div>
+            <div class="signin-wpapper ">
+              <h2 class="modal__title">Sign in</h2>
+              <form action="signin" class="modal__form-login">
+                <label class="modal__label">
+                  <span class="modal__label-txt">Email</span>
+                  <input type="email" name="email" class="modal__field-input" required title="***@mail.com" />
+                  <svg width="18" height="18" class="modal__icon">
+                    <use href="./images/svg/svg.svg#icon-email"></use>
+                  </svg>
+                </label>
+                <label class="modal__label">
+                  <span class="modal__label-txt">Password</span>
+                  <input type="password" name="pass" class="modal__field-input " required />
+                  <svg width="18" height="18" class="modal__icon">
+                    <use href="./images/svg/svg.svg#icon-key"></use>
+                  </svg>
+                </label>
+                <button type="submit" class="modal__button" aria-label="sign in">Sign in</button>
+              </form>
+    
+              <div class="signup-now">
+                <p class="signup-now__text">Not a member?</p>
+                <button class="signup-now__button" aria-label="sign up now">Sign up Now</button>
+              </div>
+              <div class="signin-modal__error">
+              </div>
+            </div>
+            <div class="logout-wpapper modal-logout--hidden">
+              <h2 class="modal__title">Do you want to log out?</h2>
+              <div class="modal-logout__box-btn">
+                <button class="logout-button--yes modal__button" type="button">Yes</button>
+                <button class="logout-button--no modal__button" type="button">No</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    
       </ul>
     </nav>
       <form class="header__search-form js-search-form" id="search-form">
